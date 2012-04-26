@@ -1,5 +1,4 @@
 
-
 /* ===== Primary Styles ========================================================
    Author:
    ========================================================================== */
@@ -34,6 +33,7 @@
 #old_house.infographicElement{
 	background-image: url(./../assets/old_house.svg); 
 	height:300px;
+	width:400px;
 }
 
 #old_car.infographicElement{
