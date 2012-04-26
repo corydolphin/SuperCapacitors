@@ -4,12 +4,33 @@
    Author:
    ========================================================================== */
 
+#main{
+ 	height:600px
+}
 
+.infographicElement{
+	background-image:url(http://upload.wikimedia.org/wikipedia/en/5/5c/Black_Box.svg);
+	background-size: contain; 	
+	background-repeat:no-repeat;
+}
+#old_house.infographicElement{
+	background-image: url(file:///C:/Users/wdolphin/Dropbox/StuffOfHistory/assets/old_house.svg); 
+	height:300px;
+}
 
-
-
-
-
+#old_car.infographicElement{
+	background-image: url(file:///C:/Users/wdolphin/Dropbox/StuffOfHistory/assets/old_car.svg); 
+	height:300px;
+	position:relative;
+	left:400px;
+}
+.callout{
+	width:200px	;
+	background-color:white;
+}
+.callout:hover{
+	display:block;
+}
 
 
 
