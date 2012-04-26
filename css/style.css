@@ -13,6 +13,24 @@
 	background-size: contain; 	
 	background-repeat:no-repeat;
 }
+
+.infographicElement .triggerElement{
+	height:40px;
+	width:40px;
+	background-color:red;
+	-moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    border-radius: 20px;
+    opacity:0.2;
+}
+ .active{
+ 	background-color:black;
+	opacity: 0.8;
+	-moz-opacity: 0.8;
+	filter:alpha(opacity=8);
+}
+
 #old_house.infographicElement{
 	background-image: url(./../assets/old_house.svg); 
 	height:300px;
@@ -27,10 +45,10 @@
 .callout{
 	width:200px	;
 	background-color:white;
+	display: none;
+    position: absolute;
 }
-.callout:hover{
-	display:block;
-}
+
 
 
 
