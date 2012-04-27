@@ -18,17 +18,18 @@ $(document).ready(function(){
 		}
 	);
 	 		
-
 	$('.triggerElement').hover(
 		function(){
+			$(this).parent().children('.callout').each(function(){
+				$(this).show();
+			});
 
-	 	$('div#.callout').show();
-	 	$(this).parent().children('.callout').each(function(){});
 		},
 	    function(){
-	 	$('div#.callout').hide();
-
-	})
+			$(this).parent().children('.callout').each(function(){
+				$(this).hide();
+	    	});	
+		});
 });
 
 

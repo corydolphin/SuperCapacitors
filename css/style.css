@@ -13,6 +13,11 @@
 	background-repeat:no-repeat;
 }
 
+.calloutContainer {
+height:auto;
+width:auto;	
+}
+
 .infographicElement .triggerElement{
 	height:40px;
 	width:40px;
