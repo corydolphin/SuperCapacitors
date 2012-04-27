@@ -7,13 +7,13 @@ $(document).ready(function(){
 	console.log('working');
 	$('.infographicElement').hover(
 		function(){
-	 		$(this).children('.triggerElement').each(function(){
-	 			this.style.opacity = 0.9;
+	 		$(this).children('.calloutContainer').children('.triggerElement').each(function(){
+	 			this.style.opacity = 0.5;
 	 		});
 		},
 	    function(){
-			$(this).children('.triggerElement').each(function(){
-	 			this.style.opacity = 0.2;
+	 		$(this).children('.calloutContainer').children('.triggerElement').each(function(){
+	 			this.style.opacity = 0.05;
 	 		});
 		}
 	);
@@ -29,7 +29,8 @@ $(document).ready(function(){
 			$(this).parent().children('.callout').each(function(){
 				$(this).hide();
 	    	});	
-		});
+		}
+	);
 });
 
 

@@ -26,13 +26,14 @@ width:auto;
     -webkit-border-radius: 20px;
     -khtml-border-radius: 20px;
     border-radius: 20px;
-    opacity:0.2;
+    opacity:0.05;
 }
- .active{
- 	background-color:black;
-	opacity: 0.8;
-	-moz-opacity: 0.8;
-	filter:alpha(opacity=8);
+
+.callout{
+	width:200px	;
+	background-color:white;
+	display: none;
+    position: absolute;
 }
 
 #old_house.infographicElement{
@@ -47,12 +48,7 @@ width:auto;
 	position:relative;
 	left:400px;
 }
-.callout{
-	width:200px	;
-	background-color:white;
-	display: none;
-    position: absolute;
-}
+
 
 
 
