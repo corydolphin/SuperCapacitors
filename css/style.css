@@ -14,24 +14,51 @@
 }
 
 .calloutContainer {
-height:auto;
-width:auto;	
+	height:auto;
+	width:auto;	
 }
 
 .infographicElement .triggerElement{
+	height:20px;
+	width:20px;
+
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+    opacity:0.1;
+	background-color:#006590;
+	z-index:20;
+	transition: width 1s, height 1s,border-radius 1s, opacity 1s, transform 1s;
+	-moz-transition: width 1s, height 1s,border-radius 1s, opacity 1s, -moz-transform 1s;
+	-webkit-transition: width 1s, height 1s,border-radius 1s, opacity 1s, -webkit-transform 1s;
+	-o-transition: width 1s, height 1s,border-radius 1s, opacity 1s,-o-transform 1s;
+	transition-timing-function: ease;
+	-webkit-transition-timing-function: ease;
+	-moz-transition-timing-function: ease;
+	-o-transition-timing-function: ease;
+}
+
+.triggerElement.active{
 	height:40px;
 	width:40px;
-	background-color:red;
 	-moz-border-radius: 20px;
     -webkit-border-radius: 20px;
     -khtml-border-radius: 20px;
     border-radius: 20px;
-    opacity:0.05;
+    opacity:0.5;
+
 }
 
 .callout{
-	width:200px	;
+
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+	width:300px	;
 	background-color:white;
+	opacity:0.8;
 	display: none;
     position: absolute;
 }

@@ -8,12 +8,13 @@ $(document).ready(function(){
 	$('.infographicElement').hover(
 		function(){
 	 		$(this).children('.calloutContainer').children('.triggerElement').each(function(){
-	 			this.style.opacity = 0.5;
+	 			$(this).addClass('active');	
+	 			//this.style.opacity = 0.5;
 	 		});
 		},
 	    function(){
 	 		$(this).children('.calloutContainer').children('.triggerElement').each(function(){
-	 			this.style.opacity = 0.05;
+	 			$(this).removeClass('active');
 	 		});
 		}
 	);
