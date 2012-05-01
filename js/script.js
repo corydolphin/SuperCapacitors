@@ -3,7 +3,9 @@
 */
 $(document).ready(function(){
 
-
+	$('#nowButton').bind('click',function(){$(this).parent().children().removeClass('active'); $(this).addClass('active');});
+	$('#nearButton').bind('click',function(){$(this).parent().children().removeClass('active'); $(this).addClass('active');});
+	$('#farButton').bind('click',function(){$(this).parent().children().removeClass('active'); $(this).addClass('active');});
 	console.log('working');
 	$('.infographicElement').hover(
 		function(){
@@ -18,18 +20,26 @@ $(document).ready(function(){
 	 		});
 		}
 	);
-	 		
+	 
 	$('.triggerElement').hover(
 		function(){
 			$(this).parent().children('.callout').each(function(){
-				$(this).show();
+				$(this).addClass('active');	
 			});
 
 		},
 	    function(){
 			$(this).parent().children('.callout').each(function(){
-				$(this).hide();
+				$(this).removeClass('active');	
 	    	});	
+		}
+	);
+	$('.callout').hover(
+		function(){
+			$(this).addClass('active');	
+		},
+		function(){
+			$(this).removeClass('active');	
 		}
 	);
 });
