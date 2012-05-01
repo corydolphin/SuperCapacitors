@@ -40,7 +40,7 @@
     -webkit-border-radius: 10px;
     -khtml-border-radius: 10px;
     border-radius: 10px;
-    opacity:0.1;
+    opacity:0.3;
 	background-color:yellow;
 	z-index:20;
 	transition: width 1s, height 1s,border-radius 1s, opacity 1s, margin-bottom 1s,margin-left 1s, transform 1s;
@@ -62,7 +62,7 @@
     -webkit-border-radius: 20px;
     -khtml-border-radius: 20px;
     border-radius: 20px;
-    opacity:0.5;
+    opacity:0.7;
 
 }
 
@@ -77,12 +77,13 @@
 	opacity:0.8;
 	display: none;
     position: absolute;
+    z-index:200;
 }
 
 
 .callout.active{
 	display: block;
-	z-index:9000;
+	
 }
 .callout>p,h2,a{
 	margin-left:10px;
@@ -103,7 +104,10 @@
 	height:300px;
 	width:400px;
 	z-index:202;
-
+}
+#old_car #engineCalloutContainer{
+	margin-top:80px;
+	margin-left:65px;
 }
 
 #old #old_person.infographicElement{
@@ -113,8 +117,8 @@
 	height:300px;
 	width:100px;
 	z-index:205;
-
 }
+#old_person #phoneCalloutContainer{margin-left: 80px;margin-top: 60px;}
 
 
 
