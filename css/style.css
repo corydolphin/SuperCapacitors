@@ -72,7 +72,7 @@
     -webkit-border-radius: 5px;
     -khtml-border-radius: 5px;
     border-radius: 5px;
-	width:300px	;
+	width:400px	;
 	background-color:white;
 	opacity:0.8;
 	display: none;
@@ -108,6 +108,10 @@
 #old_car #engineCalloutContainer{
 	margin-top:80px;
 	margin-left:65px;
+}
+#old_car #fuelCalloutContainer{
+	margin-left: 350px;
+	margin-top: -50px;
 }
 
 #old #old_person.infographicElement{
