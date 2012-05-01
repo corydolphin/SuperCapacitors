@@ -10,11 +10,20 @@
 .infographicElement{
 	background-size: contain; 	
 	background-repeat:no-repeat;
+	display:inline-block;
+	position:relative;
 }
 
 .drawingFrame{
 	height:100%;
 	margin-top:15px;
+	background-size: contain; 	
+	background-repeat:no-repeat;
+}
+
+#old{
+	background-image: url(./../assets/old_house.svg); 
+
 }
 
 .calloutContainer {
@@ -32,7 +41,7 @@
     -khtml-border-radius: 10px;
     border-radius: 10px;
     opacity:0.1;
-	background-color:#006590;
+	background-color:yellow;
 	z-index:20;
 	transition: width 1s, height 1s,border-radius 1s, opacity 1s, margin-bottom 1s,margin-left 1s, transform 1s;
 	-moz-transition: width 1s, height 1s,border-radius 1s, opacity 1s, margin-bottom 1s,margin-left 1s, -moz-transform 1s;
@@ -69,23 +78,43 @@
 	display: none;
     position: absolute;
 }
+
+
 .callout.active{
 	display: block;
+	z-index:9000;
+}
+.callout>p,h2,a{
+	margin-left:10px;
 }
 
-#old_house.infographicElement{
-	background-image: url(./../assets/old_house.svg); 
-	height:300px;
-	width:400px;
+#old #old_house.infographicElement{
+	height:50px;
+	width:80px;
+	top:-50px;
+	left:80px;
+	z-index:201;
 }
 
-#old_car.infographicElement{
+#old #old_car.infographicElement{
+	top:325px;
+	left:180px;
 	background-image: url(./../assets/old_car.svg); 
 	height:300px;
-	position:relative;
-	left:400px;
+	width:400px;
+	z-index:202;
+
 }
 
+#old #old_person.infographicElement{
+	top:300px;
+	left:0px;
+	background-image: url(./../assets/old_person.svg); 
+	height:300px;
+	width:100px;
+	z-index:205;
+
+}
 
 
 
