@@ -36,10 +36,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Project name</a>
+          <a class="brand" href="#">Supercapacitors</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
+              <li class="active"><a href="#">Infographic</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
@@ -63,7 +63,7 @@
               <h2>PowerGrid </h2>
               <p>The house, like every other one in the neighborhood, is connected to the grid by a series of power lines. The grid doesn't store energy, so energy is made on-demand at a coal-burning power plant. Energy costs most at peak times, like during the day, and in the summer when air conditioners are on. 
               </p>
-              <div class="readMore">Click to learn more about the grid.</div>
+              <a href="/">Learn more about the grid.</a>
             </div>
         </div>
       </div>
@@ -74,7 +74,7 @@
             <div class="callout" >
               <h2>Person </h2>
               <p> The handheld electronic of choice is a smartphone. These phones are powered by lithium-ion batteries that take a few hours to charge and need to be charged around once a day.  These batteries don't work well in cold weather, and last only a few years before needing to be replaced.  If it is charged too often or too little, it lasts for even fewer cycles.  But that's not the only energy storage in the handhelds - even today, some digital cameras use capacitors to power the flash, and some even use supercapacitors.</p>
-              <a href="/">How supercapacitors work and how they are different</a>
+              <a href="#morePhone" data-toggle="modal" data-target="#morePhone">How supercapacitors work and how they are different</a>
             </div>
         </div>
       </div>
@@ -87,6 +87,7 @@
             <h2>Engine</h2>
             <p>A hybrid car has two engines: electric and gas-powered.  Gas engines burn gasoline and use the released heat and pressure to turn pistons. The electric motor is powered by lithium-ion batteries, which are charged by the gasoline engine and also by braking.  The energy from braking is turned to heat in a standard car, so that's all a big gain.
               Hybrids offer improved mileage, but with a big drawback: weight.  Having a full-fledged gasoline engine and a full battery pack is heavy.  Lithium-ion batteries do not last very long, unfortunately, and do not hold nearly as much energy as gasoline for the same weight.</p>
+            <a href="#moreEngine" data-toggle="modal">I LOVE ENGINES</a>
           </div>
         </div>
         <div id="fuelCalloutContainer" class="calloutContainer">
@@ -99,21 +100,34 @@
         </div>
       </div>
     
-
-
-
     </div>
       <hr>
       <footer>
-        <p>&copy; Company 2012</p>
+        <p>Franklin W. Olin College of Engineering, Stuff of History 2012</p>
       </footer>
 
     </div> <!-- /container -->
+          
+          <!-- modal windows for more info-->
+          <div class="modal hide in" id="moreEngine">
+            <div class="modal-header">
+              <button class="close" data-dismiss="modal">×</button>
+              <h3>Hybrids</h3>
+            </div>
+            <div class="modal-body">
+              <p>Hybrid cars, like the Audi A8 hybrid here, combine two motors into their drivetrains: an electric motor and a gasoline engine.  Like most cars, the engine is powered by gasoline, but the electric motor is powered by lithium-ion batteries.  Those batteries charge when the car is braking; rather than squeezing brake pads to slow the car down, a generator turns, turning the car's kinetic energy into an electrical current thatcharges the batteries.  Those batteries are then used to help the gasoline engine with acceleration and regular driving.  Though a hybrid drivetrain helps with fuel efficiency, it's pretty complicated - it has a lot of extra weight from having two systems.  They're a great step forward, but they are still powered by gasoline and are definitely imperfect.</p>
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+          <!-- /modal windows for more info-->
+
 <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> -->
 <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
 
 <script src="js/libs/bootstrap/bootstrap.min.js"></script>
-
+<script src="js/libs/jquery.qtip.min.js"></script>
 <script src="js/script.js"></script>
+<script src="js/libs/hoverIntent.minified.js"></script>
 </body>
 </html>

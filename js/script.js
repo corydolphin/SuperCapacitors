@@ -3,19 +3,25 @@
 */
 $(document).ready(function(){
 
+	$('.btn').qtip();
+
 	$('#nowButton').bind('click',function(){$(this).parent().children().removeClass('active'); $(this).addClass('active');});
 	$('#nearButton').bind('click',function(){$(this).parent().children().removeClass('active'); $(this).addClass('active');});
 	$('#farButton').bind('click',function(){$(this).parent().children().removeClass('active'); $(this).addClass('active');});
 	console.log('working');
+
+
+	
 	$('.infographicElement').hover(
 		function(){
 	 		$(this).children('.calloutContainer').children('.triggerElement').each(function(){
 	 			$(this).addClass('active');	
-	 			//this.style.opacity = 0.5;
+	 			
 	 		});
 		},
 	    function(){
 	 		$(this).children('.calloutContainer').children('.triggerElement').each(function(){
+	 			
 	 			$(this).removeClass('active');
 	 		});
 		}
@@ -42,6 +48,7 @@ $(document).ready(function(){
 			$(this).removeClass('active');	
 		}
 	);
+
 });
 
 

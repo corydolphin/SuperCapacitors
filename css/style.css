@@ -125,7 +125,9 @@
 #old_person #phoneCalloutContainer{margin-left: 80px;margin-top: 60px;}
 
 
-
+.modal{
+	display:none;width:940px;margin-left:-490px;
+}
 
 
 
