@@ -40,18 +40,29 @@ $(document).ready(function(){
 		timeout:1000,
 	    out:function(){
 			$(this).parent().children('.callout').each(function(){
-				$(this).removeClass('active');	
+				if(!this.hovering)
+					$(this).removeClass('active');
 	    	});	
 		}
 	}
 	);
-	$('.callout').hover(
-		function(){
-			$(this).addClass('active');	
+	$('.callout').hoverIntent(
+	{
+		sensitivity:7,
+		interval:100,
+		over: function(){
+			$(this).addClass('active');
+			$(this).parent().children('.triggerElement').each(function(){
+				$(this).addClass('active');
+				this.hovering = true;
+			});
 		},
-		function(){
-			$(this).removeClass('active');	
+		timeout:500,
+		out:function(){
+			$(this).removeClass('active');
+			this.hover=false;	
 		}
+	}
 	);
 
 	modalGetter = function(id){
