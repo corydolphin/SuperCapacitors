@@ -3,9 +3,26 @@
 */
 $(document).ready(function(){
 
-	$('#nowButton').bind('click',function(){$(this).parent().children().removeClass('active'); $(this).addClass('active');});
-	$('#nearButton').bind('click',function(){$(this).parent().children().removeClass('active'); $(this).addClass('active');});
-	$('#farButton').bind('click',function(){$(this).parent().children().removeClass('active'); $(this).addClass('active');});
+	$('#nowButton').bind('click',function(){
+		$(this).parent().children().removeClass('active');
+		$(this).addClass('active');
+		$('#old').show();
+		$('#near').hide();
+
+	});
+	$('#nearButton').bind('click',function(){
+		$(this).parent().children().removeClass('active'); 
+		$(this).addClass('active');
+		$('#old').hide();
+		$('#near').show();
+	});
+	
+	$('#farButton').bind('click',function(){
+		$(this).parent().children().removeClass('active'); 
+		$(this).addClass('active');
+
+	
+	});
 
 	$('.infographicElement').hoverIntent(
 	{

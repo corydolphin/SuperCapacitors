@@ -22,16 +22,13 @@
 	background-repeat:no-repeat;
 }
 
-#old{
-	background-image: url(./../assets/old_house.svg); 
-
-}
-
 .calloutContainer {
 	height:auto;
 	width:auto;	
 }
-
+.modal{
+	display:none;width:940px;margin-left:-490px;
+}
 .infographicElement .triggerElement{
 	height:20px;
 	width:20px;
@@ -63,11 +60,9 @@
     -khtml-border-radius: 20px;
     border-radius: 20px;
     opacity:0.7;
-
 }
 
 .callout{
-
 	-moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     -khtml-border-radius: 5px;
@@ -80,7 +75,6 @@
     z-index:500;
 }
 
-
 .callout.active{
 	display: block;
     position: absolute;	
@@ -89,6 +83,11 @@
 	margin-left:10px;
 }
 
+/**OLD FRAME STYLES **/
+#old{
+	background-image: url(./../assets/old_house.svg);
+	display:block;
+}
 #old #old_house.infographicElement{
 	height:50px;
 	width:80px;
@@ -117,7 +116,6 @@
 	margin-left: 350px;
 	margin-top: -50px;
 }
-
 #old #old_person.infographicElement{
 	top:300px;
 	left:0px;
@@ -126,17 +124,62 @@
 	width:100px;
 	z-index:25;
 }
-
 #old_person #phoneCalloutContainer{
 	margin-left: 80px;
 	margin-top: 60px; 
 	z-index:20;
 }
 
-
-.modal{
-	display:none;width:940px;margin-left:-490px;
+/**near FRAME STYLES **/
+#near{
+	background-image: url(./../assets/near_house.svg);
+	display:none;
 }
+#near #near_house.infographicElement{
+	height:50px;
+	width:80px;
+	top:-50px;
+	left:80px;
+	z-index:30;
+}
+#near #near_house.calloutContainer{
+	z-index:25;
+}
+
+#near #near_car.infographicElement{
+	top:325px;
+	left:180px;
+	background-image: url(./../assets/near_car.svg); 
+	height:300px;
+	width:400px;
+	z-index:0;
+
+}
+#near_car #engineCalloutContainer{
+	margin-top:80px;
+	margin-left:65px;
+}
+#near_car #fuelCalloutContainer{
+	margin-left: 350px;
+	margin-top: -50px;
+}
+#near #near_person.infographicElement{
+	top:300px;
+	left:0px;
+	background-image: url(./../assets/near_person.svg); 
+	height:300px;
+	width:100px;
+	z-index:25;
+}
+#near_person #phoneCalloutContainer{
+	margin-left: 80px;
+	margin-top: 60px; 
+	z-index:20;
+}
+
+
+/**FUTURE FRAME STYLES **/
+
 
 
 
