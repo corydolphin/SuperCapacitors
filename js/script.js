@@ -24,62 +24,56 @@ $(document).ready(function(){
 	
 	});
 
-	$('.infographicElement').hoverIntent(
-	{
-		sensitivity: 7,
-		interval: 100,
-		over: function(){
+	$('.infographicElement').hover(
+		function(){
 	 		$(this).children('.calloutContainer').children('.triggerElement').each(function(){
 	 			$(this).addClass('active');	
-	 			
 	 		});
 		},
-		timeout:1000,
-	    out: function(){
-	 		$(this).children('.calloutContainer').children('.triggerElement').each(function(){
-	 			
-	 			$(this).removeClass('active');
-	 		});
+		function(){
+			that = this;
+	 		setTimeout(function(){
+		 		$(that).children('.calloutContainer').children('.triggerElement').each(function(){
+		 			$(this).removeClass('active');
+		 		});
+	 		},1000); //wait 1 second before hiding the trigger after mouse leaves the infographic element div
 		}
-	}
 	);
 	 
-	$('.triggerElement').hoverIntent(
-	{
-		sensitivity: 7,
-		interval: 100,
-		over:function(){
+	$('.triggerElement').hover(
+	
+		function(){
+			$(this).data("hover",true);
 			$(this).parent().children('.callout').each(function(){
 				$(this).addClass('active');	
 			});
-
 		},
-		timeout:1000,
-	    out:function(){
-			$(this).parent().children('.callout').each(function(){
-				if(!this.hovering)
-					$(this).removeClass('active');
-	    	});	
+	    function(){
+	    	var that = this;
+	    	$(this).data("hover",false);
+	    	
+	    	setTimeout(function(){
+				$(that).parent().children('.callout').each(function(){
+					if(! $(this).data("hover")){
+						$(this).removeClass('active');
+					}
+				});
+	    	},1000);	
 		}
-	}
 	);
-	$('.callout').hoverIntent(
-	{
-		sensitivity:7,
-		interval:100,
-		over: function(){
+	$('.callout').hover(
+		function(){
 			$(this).addClass('active');
+			$(this).data("hover",true);
 			$(this).parent().children('.triggerElement').each(function(){
 				$(this).addClass('active');
-				this.hovering = true;
 			});
 		},
-		timeout:500,
-		out:function(){
-			$(this).removeClass('active');
-			this.hover=false;	
-		}
-	}
+		function(){
+			$(this).data("hover",false);
+			var that = this;
+			setTimeout(function(){$(that).removeClass('active');},500);
+        }
 	);
 
 	modalGetter = function(id){
