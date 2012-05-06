@@ -1,9 +1,25 @@
 	<div class="modal-header">
 	              <button class="close" data-dismiss="modal">×</button>
-	              <h3>Hybrids</h3>
+	              <h3> Why capacitors charge so quickly: the math</h3>
 	            </div>
 	            <div class="modal-body">
-	              lalal
+	             
+	           	<p> Supercapacitors can charge a lot faster than batteries because they aren't chemical.  In a chemical battery, like a lithium-ion cell, energy is stored by changing the state of molecules, and that can take a long time since molecules move so slowly compared to electrons.  Charging a capacitor is actually governed by pretty simple physics.  Recall that the charge on a capacitor is the capacitance times the voltage driving the electrons, or Q = CV.  If a simple battery is charging the capacitor, and let's say there's some internal resistance somewhere that we call R, we can solve the equation. </p>
+
+				<p>In any circuit, all of the voltage drops have to total 0 - otherwise,energy isn't conserved..  That means that the battery's voltage has to equal the voltage across the resistor, IR through Ohm's law, plus the voltage across the capacitor, Q/C.  Current is the flow of charge, so it's dQ/dt.
+				Rearranging those a  little bit, we can write that state as a differential equation:</p>
+
+				<img src='assets/diffyq.png' width='200px'/>
+
+				<p> Using technicques from calculus, we can solve this differential equation to see what the current does:  </p>
+
+				<img src='assets/current_as_time.png' width='200px' />
+
+
+				<p> That means that the current in the circuit drops exponentially as the capacitor charges.  Exponential decay means that the cycle reaches nearly full charge very quickly, particularly compared to batteries, that charge linearly in time.  That means if it takes 1 hour to charge 10%, it takes 2 hours to charge 20%, and so on. In a capacitor, it might only take 10 seconds to charge 50%, then reach 75% in another 10 seconds, then 88% in another 10 seconds, and so on.  You can achieve a majority of charge in only a few time constants, which makes it extremely useful.  On a stranger note, they never fully charge, only always peeking ever closer. </p>
+
+				<p> Supercapacitors don't just charge quickly - they release energy quickly, too. If you connect the ends of a charged capacitor, those electrons will see a shortcut to the other plate through tso they will rush through the wire back to the protons.  That rush of electrons can be used to power motors, LEDs, or do just about anything. </p>
+
 	            </div>
 	            <div class="modal-footer">
 	            </div>
