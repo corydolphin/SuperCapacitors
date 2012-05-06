@@ -8,19 +8,22 @@ $(document).ready(function(){
 		$(this).addClass('active');
 		$('#old').show();
 		$('#near').hide();
-
+		$('#future').hide();
 	});
 	$('#nearButton').bind('click',function(){
 		$(this).parent().children().removeClass('active'); 
 		$(this).addClass('active');
 		$('#old').hide();
 		$('#near').show();
+		$('#future').hide();
 	});
 	
 	$('#farButton').bind('click',function(){
 		$(this).parent().children().removeClass('active'); 
 		$(this).addClass('active');
-
+		$('#old').hide();
+		$('#near').hide();
+		$('#future').show();
 	
 	});
 
@@ -79,7 +82,7 @@ $(document).ready(function(){
 	modalGetter = function(id){
 		$.get('./modalContent/'+ id + '.html', function(html){
 			$('#' + String(id)).append(html);	
-		});
+		}).error(function(){console.log('error');});
 	};
 	$('.modal.hide.in').each(function(){
 		
