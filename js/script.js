@@ -37,7 +37,9 @@ $(document).ready(function(){
 			that = this;
 	 		setTimeout(function(){
 		 		$(that).children('.calloutContainer').children('.triggerElement').each(function(){
-		 			$(this).removeClass('active');
+					if(! $(this).data("hover")){
+		 				$(this).removeClass('active');
+		 			}
 		 		});
 	 		},1000); //wait 1 second before hiding the trigger after mouse leaves the infographic element div
 		}
@@ -48,7 +50,7 @@ $(document).ready(function(){
 		function(){
 			$(this).data("hover",true);
 			$(this).parent().children('.callout').each(function(){
-				$(this).addClass('active');	
+				$(this).addClass('active');
 			});
 		},
 	    function(){
@@ -61,7 +63,7 @@ $(document).ready(function(){
 						$(this).removeClass('active');
 					}
 				});
-	    	},1000);	
+	    	},500);	
 		}
 	);
 	$('.callout').hover(
@@ -75,7 +77,11 @@ $(document).ready(function(){
 		function(){
 			$(this).data("hover",false);
 			var that = this;
-			setTimeout(function(){$(that).removeClass('active');},500);
+			setTimeout(function(){
+				if(! $(that).data("hover")){
+					$(that).removeClass('active');
+				}
+			},300);
         }
 	);
 
