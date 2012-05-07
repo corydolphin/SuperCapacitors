@@ -214,6 +214,13 @@
 	z-index:25;
 }
 
+#future_house #futureAppliances{
+	margin-left:310px;
+	margin-top:50px;
+}
+
+
+
 #future #future_car.infographicElement{
 	top:325px;
 	left:180px;
