@@ -30,13 +30,18 @@ $(document).ready(function(){
 	$('.infographicElement').hover(
 		function(){
 	 		$(this).children('.calloutContainer').children('.triggerElement').each(function(){
-	 			$(this).addClass('active');	
+	 			$(this).addClass('active');
 	 		});
 		},
 		function(){
-			that = this;
+			var that = this;
 	 		setTimeout(function(){
 		 		$(that).children('.calloutContainer').children('.triggerElement').each(function(){
+					if(! $(this).data("hover")){
+		 				$(this).removeClass('active');
+		 			}
+		 		});
+		 		$(that).children('.calloutContainer').children('.callout').each(function(){
 					if(! $(this).data("hover")){
 		 				$(this).removeClass('active');
 		 			}
@@ -58,6 +63,9 @@ $(document).ready(function(){
 	    	$(this).data("hover",false);
 	    	
 	    	setTimeout(function(){
+	    		if(! $(this).data("hover")){
+						$(this).removeClass('active');
+				}
 				$(that).parent().children('.callout').each(function(){
 					if(! $(this).data("hover")){
 						$(this).removeClass('active');
