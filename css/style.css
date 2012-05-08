@@ -1,6 +1,6 @@
 
 /* ===== Primary Styles ========================================================
-   Author:
+   Author: wcdolphin
    ========================================================================== */
 
 #main{
@@ -84,30 +84,48 @@
 	margin-left:10px;
 }
 
-/**OLD FRAME STYLES **/
-#old{
-	background-image: url(./../assets/old_house.svg);
-	display:block;
-}
-#old #old_house.infographicElement {
+.infographicElement.house{
 	height: 200px;
 	width: 600px;
 	top: 60px;
 	left: 90px;
 	z-index: 30;
 }
-#old #old_house.calloutContainer{
+
+.infographicElement.house .calloutContainer{
 	z-index:25;
 }
 
-#old #old_car.infographicElement{
+.infographicElement.person{
+	top:300px;
+	left:-550px;
+	height:300px;
+	width:100px;
+	z-index:25;
+}
+
+.infographicElement.person .calloutContainer{
+	margin-left: 80px;
+	margin-top: 60px; 
+	z-index:20;
+}
+
+.infographicElement.car{
 	top:45px;
-	left:420px;
-	background-image: url(./../assets/old_car.svg); 
+	left:420px; 
 	height:300px;
 	width:400px;
 	z-index:0;
+}
 
+/**OLD FRAME STYLES **/
+#old{
+	background-image: url(./../assets/old_house.svg);
+	display:block;
+}
+
+#old #old_car.infographicElement{
+	background-image: url(./../assets/old_car.svg); 
 }
 #old_car #engineCalloutContainer{
 	margin-top:80px;
@@ -125,19 +143,8 @@
 	margin-left:-370px;
 }
 
-
 #old #old_person.infographicElement{
-	top:300px;
-	left:-550px;
 	background-image: url(./../assets/old_person.svg); 
-	height:300px;
-	width:100px;
-	z-index:25;
-}
-#old_person #phoneCalloutContainer{
-	margin-left: 80px;
-	margin-top: 60px; 
-	z-index:20;
 }
 
 /**near FRAME STYLES **/
@@ -145,25 +152,10 @@
 	background-image: url(./../assets/near_house.svg);
 	display:none;
 }
-#near #near_house.infographicElement{
-	height:50px;
-	width:80px;
-	top:-50px;
-	left:80px;
-	z-index:30;
-}
-#near #near_house.calloutContainer{
-	z-index:25;
-}
 
 #near #near_car.infographicElement{
-	top:325px;
-	left:180px;
-	background-image: url(./../assets/near_car.svg); 
-	height:300px;
-	width:400px;
-	z-index:0;
-
+	background-image: url(./../assets/near_car.svg);
+	width:300px;
 }
 #near_car #engineCalloutContainer{
 	margin-top:80px;
@@ -184,19 +176,8 @@
 
 
 #near #near_person.infographicElement{
-	top:300px;
-	left:0px;
 	background-image: url(./../assets/near_person.svg); 
-	height:300px;
-	width:100px;
-	z-index:25;
 }
-#near_person #phoneCalloutContainer{
-	margin-left: 80px;
-	margin-top: 60px; 
-	z-index:20;
-}
-
 
 /**FUTURE FRAME STYLES **/
 
@@ -204,16 +185,7 @@
 	background-image: url(./../assets/future_house.svg);
 	display:none;
 }
-#future #future_house.infographicElement{
-	height:50px;
-	width:80px;
-	top:-50px;
-	left:80px;
-	z-index:30;
-}
-#future #future_house.calloutContainer{
-	z-index:25;
-}
+
 
 #future_house #futureAppliances{
 	margin-left:310px;
@@ -223,13 +195,7 @@
 
 
 #future #future_car.infographicElement{
-	top:325px;
-	left:180px;
 	background-image: url(./../assets/future_car.svg); 
-	height:300px;
-	width:400px;
-	z-index:0;
-
 }
 #future_car #engineCalloutContainer{
 	margin-top:80px;
@@ -240,18 +206,5 @@
 	margin-top: -50px;
 }
 #future #future_person.infographicElement{
-	top:330px;
-	left:-20px;
 	background-image: url(./../assets/future_person.svg); 
-	height:300px;
-	width:100px;
-	z-index:25;
 }
-#future_person #phoneCalloutContainer{
-	margin-left: 80px;
-	margin-top: 60px; 
-	z-index:20;
-}
-
-
-
