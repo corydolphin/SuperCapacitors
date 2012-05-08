@@ -1,6 +1,6 @@
 
 /* ===== Primary Styles ========================================================
-   Author: wcdolphin
+   Author: @wcdolphin
    ========================================================================== */
 
 #main{
@@ -167,7 +167,7 @@
 
 
 #near_car #fuelCalloutContainer{
-	margin-left: 350px;
+	margin-left: 0px;
 	margin-top: -50px;
 }
 #near_car #fuelCalloutContainer .callout{
