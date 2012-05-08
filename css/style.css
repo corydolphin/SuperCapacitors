@@ -1,6 +1,6 @@
 
 /* ===== Primary Styles ========================================================
-   Author: wcdolphin
+   Author: @wcdolphin
    ========================================================================== */
 
 #main{
@@ -94,6 +94,8 @@
 
 .infographicElement.house .calloutContainer{
 	z-index:25;
+	margin-left: 20px;
+	margin-top: 70px;
 }
 
 .infographicElement.person{
@@ -158,8 +160,11 @@
 	width:300px;
 }
 #near_car #engineCalloutContainer{
-	margin-top:80px;
-	margin-left:65px;
+	margin-top: 90px;
+	margin-left: 45px;
+	z-index:25;
+
+
 }
 #near_car #engineCalloutContainer .callout{
 	margin-top:-295px;
@@ -167,11 +172,12 @@
 
 
 #near_car #fuelCalloutContainer{
-	margin-left: 350px;
+	margin-left: 250px;
 	margin-top: -50px;
 }
 #near_car #fuelCalloutContainer .callout{
 	margin-left:-370px;
+	margin-top:-250px;
 }
 
 
@@ -201,10 +207,19 @@
 	margin-top:80px;
 	margin-left:65px;
 }
+#future_car #engineCalloutContainer .callout{
+	margin-top:-250px;
+}
 #future_car #fuelCalloutContainer{
 	margin-left: 350px;
 	margin-top: -50px;
 }
+#future_car #fuelCalloutContainer .callout{
+	margin-left:-370px;
+	margin-top:-230px;
+}
+
 #future #future_person.infographicElement{
 	background-image: url(./../assets/future_person.svg); 
+	top:350px;
 }

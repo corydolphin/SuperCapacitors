@@ -14,8 +14,8 @@ $(document).ready(function(){
 		$(this).parent().children().removeClass('active'); 
 		$(this).addClass('active');
 		$('#old').hide();
-		$('#near').show();
 		$('#future').hide();
+		$('#near').show();
 	});
 	
 	$('#farButton').bind('click',function(){
@@ -32,6 +32,7 @@ $(document).ready(function(){
 	 		$(this).children('.calloutContainer').children('.triggerElement').each(function(){
 	 			$(this).addClass('active');
 	 		});
+		console.log('hover_infographicElement');
 		},
 		function(){
 			var that = this;
@@ -42,11 +43,13 @@ $(document).ready(function(){
 		 			}
 		 		});
 		 		$(that).children('.calloutContainer').children('.callout').each(function(){
-					if(! $(this).data("hover")){
+					if($(this).data("hover") === false){
+						console.log(this);
 		 				$(this).removeClass('active');
 		 			}
 		 		});
-	 		},1000); //wait 1 second before hiding the trigger after mouse leaves the infographic element div
+	 		console.log('exit_infographicElement');
+	 		},0); //wait 1 second before hiding the trigger after mouse leaves the infographic element div
 		}
 	);
 	 
@@ -71,7 +74,7 @@ $(document).ready(function(){
 						$(this).removeClass('active');
 					}
 				});
-	    	},500);	
+	    	},300);	
 		}
 	);
 	$('.callout').hover(
@@ -89,7 +92,7 @@ $(document).ready(function(){
 				if(! $(that).data("hover")){
 					$(that).removeClass('active');
 				}
-			},300);
+			},0);
         }
 	);
 
