@@ -32,7 +32,6 @@ $(document).ready(function(){
 	 		$(this).children('.calloutContainer').children('.triggerElement').each(function(){
 	 			$(this).addClass('active');
 	 		});
-		console.log('hover_infographicElement');
 		},
 		function(){
 			var that = this;
@@ -48,7 +47,6 @@ $(document).ready(function(){
 		 				$(this).removeClass('active');
 		 			}
 		 		});
-	 		console.log('exit_infographicElement');
 	 		},0); //wait 1 second before hiding the trigger after mouse leaves the infographic element div
 		}
 	);
@@ -99,7 +97,7 @@ $(document).ready(function(){
 	modalGetter = function(id){
 		$.get('./modalContent/'+ id + '.html', function(html){
 			$('#' + String(id)).append(html);	
-		}).error(function(){console.log('error');});
+		}).error(function(){console.log('Error, resource not found');});
 	};
 	$('.modal.hide.in').each(function(){
 		

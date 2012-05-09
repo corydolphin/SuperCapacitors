@@ -38,6 +38,7 @@
 	-moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     -khtml-border-radius: 10px;
+    -ms-border-radius: 10px;
     border-radius: 10px;
     opacity:0.3;
 	background-color:yellow;
@@ -45,10 +46,12 @@
 	-moz-transition: width 1s, height 1s,border-radius 1s, opacity 1s, margin-bottom 1s,margin-left 1s, -moz-transform 1s;
 	-webkit-transition: width 1s, height 1s,border-radius 1s, opacity 1s, margin-bottom 1s,margin-left 1s, -webkit-transform 1s;
 	-o-transition: width 1s, height 1s,border-radius 1s, opacity 1s, margin-bottom 1s,margin-left 1s, -o-transform 1s;
+	-ms-transition: width 1s, height 1s,border-radius 1s, opacity 1s, margin-bottom 1s,margin-left 1s, -ms-transform 1s;
 	transition-timing-function: ease;
 	-webkit-transition-timing-function: ease;
 	-moz-transition-timing-function: ease;
 	-o-transition-timing-function: ease;	
+	-ms-transition-timing-function: ease;
 }
 
 .triggerElement.active{
@@ -57,6 +60,7 @@
 	margin-bottom: 0px;
 	margin-right: 0px;
 	-moz-border-radius: 20px;
+	-ms-border-radius: 20px;
     -webkit-border-radius: 20px;
     -khtml-border-radius: 20px;
     border-radius: 20px;
@@ -66,6 +70,7 @@
 .callout{
 	-moz-border-radius: 5px;
     -webkit-border-radius: 5px;
+    -ms-border-radius: 5px;
     -khtml-border-radius: 5px;
     border-radius: 5px;
 	width:400px	;
@@ -122,12 +127,12 @@
 
 /**OLD FRAME STYLES **/
 #old{
-	background-image: url(./../assets/old_house.svg);
+	background-image: url(./../assets/old_house.png);
 	display:block;
 }
 
 #old #old_car.infographicElement{
-	background-image: url(./../assets/old_car.svg); 
+	background-image: url(./../assets/old_car.png); 
 }
 #old_car #engineCalloutContainer{
 	margin-top:80px;
@@ -146,17 +151,17 @@
 }
 
 #old #old_person.infographicElement{
-	background-image: url(./../assets/old_person.svg); 
+	background-image: url(./../assets/old_person.png); 
 }
 
 /**near FRAME STYLES **/
 #near{
-	background-image: url(./../assets/near_house.svg);
+	background-image: url(./../assets/near_house.png);
 	display:none;
 }
 
 #near #near_car.infographicElement{
-	background-image: url(./../assets/near_car.svg);
+	background-image: url(./../assets/near_car.png);
 	width:300px;
 }
 #near_car #engineCalloutContainer{
@@ -182,13 +187,13 @@
 
 
 #near #near_person.infographicElement{
-	background-image: url(./../assets/near_person.svg); 
+	background-image: url(./../assets/near_person.png); 
 }
 
 /**FUTURE FRAME STYLES **/
 
 #future{
-	background-image: url(./../assets/future_house.svg);
+	background-image: url(./../assets/future_house.png);
 	display:none;
 }
 
@@ -201,7 +206,7 @@
 
 
 #future #future_car.infographicElement{
-	background-image: url(./../assets/future_car.svg); 
+	background-image: url(./../assets/future_car.png); 
 }
 #future_car #engineCalloutContainer{
 	margin-top:80px;
@@ -220,6 +225,6 @@
 }
 
 #future #future_person.infographicElement{
-	background-image: url(./../assets/future_person.svg); 
+	background-image: url(./../assets/future_person.png); 
 	top:350px;
 }
